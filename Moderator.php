@@ -1,6 +1,7 @@
 <?php
 
-class Moderator extends User{
+
+class Moderator{
 
 
 
