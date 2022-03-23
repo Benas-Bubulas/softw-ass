@@ -38,9 +38,28 @@ if (isset($_POST['submit'])) {
 </tr>
  </thead>
  <tbody>
- <?php foreach ($result as $row) { ?>
+ <?php foreach ($result as $row)  ?>
  <tr>
 <td><?php echo escape($row["id"]); ?></td>
 <td><?php echo escape($row["firstname"]); ?></td>
 <td><?php echo escape($row["lastname"]); ?></td>
 <td><?php echo escape($row["email"]); ?></td> 
+
+<td><?php echo escape($row["location"]); ?></td>
+<td><?php echo escape($row["date"]); ?> </td>
+ </tr>
+ <?php } ?>
+ </tbody>
+ </table>
+ <?php } else { ?>
+ > No results found for <?php echo escape($_POST['location']); ?>.
+ <?php }
+} ?>
+<h2>Find user based on location</h2>
+<form method="post">
+ <label for="location">Location</label>
+ <input type="text" id="location" name="location">
+ <input type="submit" name="submit" value="View Results">
+</form>
+<a href="index.php">Back to home</a>
+<?php require "templates/footer.php"; ?>
