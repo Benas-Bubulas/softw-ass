@@ -5,6 +5,7 @@
  *
  */
 if (isset($_POST['submit'])) {
+    require "../common.php";
     try {
         require_once './src/DBconnect.php';
 
