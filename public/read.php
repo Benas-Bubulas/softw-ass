@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
  <?php } else { ?>
  > No results found for <?php echo escape($_POST['location']); ?>.
  <?php }
-} ?>
+ ?>
 <h2>Find user based on location</h2>
 <form method="post">
  <label for="location">Location</label>

@@ -28,7 +28,7 @@ $statement->execute($new_user);
  }
 }
 ?>
-<?php require "../templates/header.php"; ?>
+<?php require "templates/header.php"; ?>
 <?php if (isset($_POST['submit']) && $statement) { ?>
  <?php echo escape($_POST['firstname']); ?> successfully added.
 <?php } ?>
@@ -47,4 +47,4 @@ $statement->execute($new_user);
  <input type="submit" name="submit" value="Submit">
  </form>
  <a href="index.php">Back to home</a>
-<?php include "../templates/footer.php"; ?>
+<?php include "templates/footer.php"; ?>
