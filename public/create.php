@@ -1,9 +1,5 @@
 <?php
-/**
- * Use an HTML form to create a new entry in the
- * users table.
- *
- */
+
 if (isset($_POST['submit'])) {
     require "../common.php";
     try {
