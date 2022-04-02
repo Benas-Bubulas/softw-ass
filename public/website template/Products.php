@@ -33,16 +33,16 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="products.html">Home</a>
+      <a class="nav-link" href="products.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="products.html">Login</a>
+      <a class="nav-link" href="products.php">Login</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="slideshow.html">Cinemas</a>
+      <a class="nav-link" href="slideshow.php">Cinemas</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="findus.html">Reviews</a>
+      <a class="nav-link" href="findus.php">Reviews</a>
     </li>
   </ul>
 </nav>
