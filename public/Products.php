@@ -12,9 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src = "js/calculate.js" type = "text/javascript"></script>
+    <script src = "website/js/calculate.js" type = "text/javascript"></script>
 	<title>Home Page</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="website/css/styles.css" rel="stylesheet" type="text/css">
     
 
     
@@ -28,7 +28,7 @@
     <header>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="#"><img src="images/unknown.png" alt="K.A logo" width="60px" height="auto"></a>
+  <a class="navbar-brand" href="#"><img src="website/images/unknown.png" alt="K.A logo" width="60px" height="auto"></a>
   
   <!-- Links -->
   <ul class="navbar-nav">
@@ -36,7 +36,7 @@
       <a class="nav-link" href="products.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="products.php">Login</a>
+      <a class="nav-link" href="db/index.php">Login</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="slideshow.php">Cinemas</a>
@@ -66,7 +66,7 @@
         <div class="products"> <!-- the products -->
             
             <div class="productschild"><p>Odeon Blanchardstown Cinema</p> </div>
-            <div class="productschild"><img src="images/cBlanch.jpg" alt="Blanchardstown Cinema" width="300" height="auto"></div>
+            <div class="productschild"><img src="website/images/cBlanch.jpg" alt="Blanchardstown Cinema" width="300" height="auto"></div>
             
             <form>
             <p>Price: €10</p>
@@ -77,7 +77,7 @@
             </form>
             
             <div class="productschild"><p>Cineworld </p></div>
-            <div class="productschild"><img src="images/cCineworld.jpg" alt="Cineworld Cinema" width="300" height="auto"></div>
+            <div class="productschild"><img src="website/images/cCineworld.jpg" alt="Cineworld Cinema" width="300" height="auto"></div>
             
             <form>
             <p>Price: €15</p>
@@ -88,7 +88,7 @@
             </form>
             
             <div class="productschild"><p>Vue cinema</p></div>
-            <div class="productschild"><img src="images/cVue1.jpg" alt="Vue Cinema" width="300" height="auto"></div>
+            <div class="productschild"><img src="website/images/cVue1.jpg" alt="Vue Cinema" width="300" height="auto"></div>
             
             <form>
             <p>Price: €10</p>
@@ -99,7 +99,7 @@
             </form>
             
             <div class="productschild"><p>Omniplex Cinema </p></div>
-            <div class="productschild"><img src="images/cOmniplex.jpg" alt="cOmniplex Cinema" width="300" height="auto"></div>
+            <div class="productschild"><img src="website/images/cOmniplex.jpg" alt="cOmniplex Cinema" width="300" height="auto"></div>
             
             <form>
             <p>Price: €12</p>
@@ -110,7 +110,7 @@
             </form>
             
             <div class="productschild"><p>Tipperary Excel Heritage Co Ltd<br>AAAAAAAAAOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAAOOOOOOOOOOOOOAAAAAAA</p></div>
-            <div class="productschild"><img src="images/cTipperary.webp" alt="Tipperary Excel Heritage Co Ltd" width="300" height="auto"></div>
+            <div class="productschild"><img src="website/images/cTipperary.webp" alt="Tipperary Excel Heritage Co Ltd" width="300" height="auto"></div>
             
             <form>
             <p>Price: €5</p>
