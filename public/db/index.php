@@ -12,7 +12,7 @@
 
 
     <body>
-        <h1>Database App</h1>
+        <!-- <h1>Database App</h1> -->
 
         <?php include "templates/header.php"; ?>
 

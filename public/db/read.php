@@ -10,12 +10,11 @@ if (isset($_POST['submit'])) {
     require_once '../src/DBconnect.php';
 
     $sql = "SELECT *
-    FROM users
-    WHERE location = :location";
-    $location = $_POST['location'];
+    FROM users";
+
 
     $statement = $connection->prepare($sql);
-    $statement->bindParam(':location', $location, PDO::PARAM_STR);
+
     $statement->execute();
     $result = $statement->fetchAll();
  } catch(PDOException $error) {
@@ -60,11 +59,10 @@ if (isset($_POST['submit'])) {
  > No results found for <?php echo escape($_POST['location']); ?>.
  <?php }
  } ?>
-<h2>Find user based on location</h2>
+<h2>Click "Reveal" to see results.</h2>
 <form method="post">
- <label for="location">Location</label>
- <input type="text" id="location" name="location">
- <input type="submit" name="submit" value="View Results">
+
+ <input type="submit" name="submit" value="Reveal">
 </form>
 <a href="index.php">Back to home</a>
 <?php require "templates/footer.php"; ?>

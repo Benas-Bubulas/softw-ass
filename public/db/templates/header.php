@@ -11,4 +11,4 @@
     </head>
     
     <body>
-    <h1>Simple Database App</h1>
+    <h1>K.A Cinemas</h1>
