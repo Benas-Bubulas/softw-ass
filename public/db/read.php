@@ -6,8 +6,8 @@
  */
 if (isset($_POST['submit'])) {
      try {
-    require "../common.php";
-    require_once './src/DBconnect.php';
+    require "common.php";
+    require_once '../src/DBconnect.php';
 
     $sql = "SELECT *
     FROM users
