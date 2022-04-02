@@ -4,14 +4,18 @@ if (isset($_POST['submit'])) {
     require "common.php";
     try {
         require_once '../src/DBconnect.php';
+        require_once '../src/User.php';
 
         $new_user = array(
             "firstname" => $_POST['firstname'],
             "lastname" => $_POST['lastname'],
             "email" => $_POST['email'],
             "age" => $_POST['age'],
-            "location" => $_POST['location']
+            "password" => $_POST['password']
            );
+
+           $user1 = new User($_POST['firstname'],$_POST['email'],$_POST['password']);
+           
            $sql = sprintf(
             "INSERT INTO %s (%s) values (%s)",
             "users",
@@ -23,7 +27,7 @@ if (isset($_POST['submit'])) {
 
     }   catch (PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
-    }
+    } 
 }
 
 
@@ -32,9 +36,9 @@ if (isset($_POST['submit'])) {
 ?>
 <?php require "templates/header.php"; ?>
 <?php if (isset($_POST['submit']) && $statement) { ?>
- <?php echo escape($_POST['firstname']); ?> successfully added.
+ <?php echo escape($_POST['firstname']); ?> <?php echo escape($user1); ?> successfully registered.
 <?php } ?>
-<h2>Add a user</h2>
+<h2>Please fill in your details below:</h2>
  <form method="post">
  <label for="firstname">First Name</label>
  <input type="text" name="firstname" id="firstname">
@@ -44,9 +48,9 @@ if (isset($_POST['submit'])) {
  <input type="text" name="email" id="email">
  <label for="age">Age</label>
  <input type="text" name="age" id="age">
- <label for="location">Location</label>
- <input type="text" name="location" id="location">
+ <label for="password">Password</label>
+ <input type="text" name="password" id="password">
  <input type="submit" name="submit" value="Submit">
  </form>
- <a href="index.php">Back to home</a>
+ <a href="../Products.php">Back to home</a>
 <?php include "templates/footer.php"; ?>

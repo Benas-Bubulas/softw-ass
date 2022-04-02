@@ -1,9 +1,5 @@
 <?php
-/**
- * Function to query information based on
- * a parameter: in this case, location.
- *
- */
+
 if (isset($_POST['submit'])) {
      try {
     require "common.php";
@@ -37,7 +33,7 @@ if (isset($_POST['submit'])) {
  <th>Last Name</th>
  <th>Email Address</th>
  <th>Age</th>
- <th>Location</th>
+ <th>Password</th>
  <th>Date</th>
 </tr>
  </thead>
@@ -49,14 +45,14 @@ if (isset($_POST['submit'])) {
 <td><?php echo escape($row["lastname"]); ?></td>
 <td><?php echo escape($row["email"]); ?></td> 
 <td><?php echo escape($row["age"]); ?></td>
-<td><?php echo escape($row["location"]); ?></td>
+<td><?php echo escape($row["password"]); ?></td>
 <td><?php echo escape($row["date"]); ?> </td>
  </tr>
  <?php } ?>
  </tbody>
  </table>
  <?php } else { ?>
- > No results found for <?php echo escape($_POST['location']); ?>.
+ > No results found for <?php echo escape($_POST['password']); ?>.
  <?php }
  } ?>
 <h2>Click "Reveal" to see results.</h2>
