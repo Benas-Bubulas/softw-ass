@@ -5,6 +5,7 @@ if (isset($_POST['submit'])) {
     try {
         require_once '../src/DBconnect.php';
         require_once '../src/User.php';
+        require_once '../src/Review.php';
 
         $new_user = array(
             "firstname" => $_POST['firstname'],
@@ -15,7 +16,9 @@ if (isset($_POST['submit'])) {
            );
 
            $user1 = new User($_POST['firstname'],$_POST['email'],$_POST['password']);
-           
+        //    $review_1 = new Review($_POST['firstname'], $_POST['email']); THIS NEEDS TO BE FIXED
+
+
            $sql = sprintf(
             "INSERT INTO %s (%s) values (%s)",
             "users",
@@ -36,7 +39,7 @@ if (isset($_POST['submit'])) {
 ?>
 <?php require "templates/header.php"; ?>
 <?php if (isset($_POST['submit']) && $statement) { ?>
- <?php echo escape($_POST['firstname']); ?> <?php echo escape($user1); ?> successfully registered.
+ <?php echo escape($_POST['firstname']); ?> <?php echo ($user1); ?>  successfully registered <br> .
 <?php } ?>
 <h2>Please fill in your details below:</h2>
  <form method="post">
