@@ -60,5 +60,5 @@ if (isset($_POST['submit'])) {
 
  <input type="submit" name="submit" value="Reveal">
 </form>
-<a href="index.php">Back to home</a>
+<a href="../Products.php">Back to home</a>
 <?php require "templates/footer.php"; ?>
