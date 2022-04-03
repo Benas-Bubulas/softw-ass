@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * This is basically the page to create an account
+ */
 if (isset($_POST['submit'])) {
     require "common.php";
     try {

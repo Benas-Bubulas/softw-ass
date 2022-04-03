@@ -1,3 +1,5 @@
+/**Used to create the database table**/
+
 CREATE DATABASE test;
  use test;
  

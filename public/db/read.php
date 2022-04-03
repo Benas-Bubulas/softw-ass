@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * This is to search for specific criteria
+ */
 if (isset($_POST['submit'])) {
      try {
     require "common.php";
