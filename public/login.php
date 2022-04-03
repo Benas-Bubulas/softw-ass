@@ -1,5 +1,5 @@
 <?php
-require_once ('config.php'); 
+require_once ('db/config.php'); 
 session_start();
 ?>
 
@@ -47,7 +47,7 @@ if(isset($_POST['Submit']))
     {
         $_SESSION['Username'] = $Username;
         $_SESSION['Active'] = true;
-        header("location:index.php"); /* 'header() is used to redirect the browser */
+        header("location:../Products.php"); /* 'header() is used to redirect the browser */
         exit; //we’ve just used header() to redirect to another page but we must terminate all current code so that it doesn’t run when we redirect
 
     }

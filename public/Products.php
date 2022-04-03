@@ -43,18 +43,19 @@
       <a class="nav-link" href="db/read.php">Search</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="slideshow.php">Cinemas</a>
+      <a class="nav-link" href="logout.php">Logout</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="findus.php">Reviews</a>
+      <a class="nav-link" href="about.php">About</a>
     </li>
   </ul>
 </nav>
         </header>
         
+        <?php require_once 'db/templates/header.php';?>
         <main id="main-content"><br>
         <h1 class="abootus">Cinemas</h1>
-        <p class="about-us">Below you will find the Cinemas!</p>
+        <p class="about-us">Status: You are logged in  <?php echo $_SESSION['Username'];?></p>
         </main>
         
 

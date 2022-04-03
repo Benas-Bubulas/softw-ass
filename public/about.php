@@ -1,4 +1,4 @@
-<?php require_once '../template/header.php';?>
+<?php require_once 'db/templates/header.php';?>
   
   <body>
     <div class="container">
@@ -29,4 +29,4 @@
 
        </div>
 
-          <?php require_once '../template/footer.php';?>
+          <?php require_once 'db/templates/footer.php';?>
