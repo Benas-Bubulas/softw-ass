@@ -38,6 +38,10 @@
     <li class="nav-item">
       <a class="nav-link" href="db/create.php">Register</a>
     </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="db/read.php">Search</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="slideshow.php">Cinemas</a>
     </li>
