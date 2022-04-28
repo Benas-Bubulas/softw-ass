@@ -70,7 +70,6 @@ try {
         <td><?php echo escape($row["lastname"]); ?></td>
         <td><?php echo escape($row["email"]); ?></td>
         <td><?php echo escape($row["age"]); ?></td>
-        <td><?php echo escape($row["location"]); ?></td>
 
         <td><button type="submit" name="submit" value="<?php echo escape($row["id"]); ?>">Delete</button></td>
       </tr>
