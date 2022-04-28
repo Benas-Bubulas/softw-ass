@@ -10,9 +10,8 @@ require "common.php";
 $success = null;
 
 if (isset($_POST["submit"])) {
-  if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
 
-  try {
+
     $connection = new PDO($dsn, $username, $password, $options);
   
     $id = $_POST["submit"];
@@ -24,10 +23,8 @@ if (isset($_POST["submit"])) {
     $statement->execute();
 
     $success = "User successfully deleted";
-  } catch(PDOException $error) {
-    echo $sql . "<br>" . $error->getMessage();
-  }
-}
+  } 
+
 
 try {
   $connection = new PDO($dsn, $username, $password, $options);
