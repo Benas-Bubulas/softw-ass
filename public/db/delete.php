@@ -58,8 +58,7 @@ try {
         <th>Last Name</th>
         <th>Email Address</th>
         <th>Age</th>
-        <th>Location</th>
-        <th>Date</th>
+
         <th>Delete</th>
       </tr>
     </thead>
@@ -72,7 +71,7 @@ try {
         <td><?php echo escape($row["email"]); ?></td>
         <td><?php echo escape($row["age"]); ?></td>
         <td><?php echo escape($row["location"]); ?></td>
-        <td><?php echo escape($row["date"]); ?> </td>
+
         <td><button type="submit" name="submit" value="<?php echo escape($row["id"]); ?>">Delete</button></td>
       </tr>
     <?php endforeach; ?>

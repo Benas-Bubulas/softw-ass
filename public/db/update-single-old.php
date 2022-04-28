@@ -10,8 +10,9 @@ require "config.php";
 require "common.php";
 
 if (isset($_POST['submit'])) {
+  if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
 
-  
+  try {
     $connection = new PDO($dsn, $username, $password, $options);
 
     $user =[
@@ -20,7 +21,6 @@ if (isset($_POST['submit'])) {
       "lastname"  => $_POST['lastname'],
       "email"     => $_POST['email'],
       "age"       => $_POST['age'],
-     
 
     ];
 
@@ -29,14 +29,15 @@ if (isset($_POST['submit'])) {
               firstname = :firstname, 
               lastname = :lastname, 
               email = :email, 
-              age = :age
-           
-            ";
+              age = :age, 
+
+            WHERE id = :id";
   
   $statement = $connection->prepare($sql);
-
   $statement->execute($user);
-
+  } catch(PDOException $error) {
+      echo $sql . "<br>" . $error->getMessage();
+  }
 }
   
 if (isset($_GET['id'])) {
