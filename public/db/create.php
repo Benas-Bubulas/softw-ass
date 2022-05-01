@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
 <?php } ?>
 <h2>Please fill in your details below:</h2>
  <form method="post">
- <label for="firstname">First Name</label>
+ <label for="firstname">First Name / Username</label>
  <input type="text" name="firstname" id="firstname">
  <label for="lastname">Last Name</label>
  <input type="text" name="lastname" id="lastname">
