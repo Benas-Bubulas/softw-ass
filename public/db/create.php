@@ -52,9 +52,9 @@ if (isset($_POST['submit'])) {
  <label for="email">Email Address</label>
  <input type="text" name="email" id="email">
  <label for="age">Age</label>
- <input type="text" name="age" id="age">
+ <input type="text" name="age" id="age" maxlength="3"> 
  <label for="password">Password</label>
- <input type="text" name="password" id="password">
+ <input type="text" name="password" id="password" >
  <input type="submit" name="submit" value="Submit">
  </form>
  <a href="../Products.php">Back to home</a>
