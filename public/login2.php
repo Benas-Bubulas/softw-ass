@@ -32,70 +32,98 @@ session_start();
         </div>
         <button name="Submit" value="Login" class="button" type="submit">Sign in</button>
 
+    
+
     </form>
 
     <?php
+
+
+
+
+
 
 /* Check if login form has been submitted */
 /* isset — Determine if a variable is declared and is different than NULL*/
 if(isset($_POST['Submit']))
 {
 
+    try {
+        require "db/common.php";
+        require_once 'src/DBconnect.php';
     
-try{
-
-
-
-    require "db/common.php";
-    require "src/DBconnect.php";
-
-
-    $message = "login";
-    $firstname = $_POST['Username'];
-    $password = $_POST['Password'];
-
-    $sql = "SELECT firstname,password
-    FROM users
-    WHERE firstname = '$firstname' ";
-
+        $user = $_POST['Username'];
+        $passowrd = $_POST['Password'];
+        $sql = "SELECT firstname,password FROM users WHERE firstname = '$user' AND password = '$password'";
     
-    $statement = $connection->prepare($sql);
-   
-
-    $result = $statement->fetchAll();
-
-    if (!$result){
-        $message = 'user does not exidst';
-    }
-    else{
-    $_SESSION['Username'] = $firstname;
-    $_SESSION['Active'] = true;
-    header("location:../Products.php");
-    }
+        $result = $connection->query($sql);
+        if($result > 0) {
+            $_SESSION['Username'] = $Username1;
+            $_SESSION['Active'] = true;
+            header("location:../Products.php");
+        }
+        else $message = 'user does not exist';
     
-} catch(PDOException $error) {
-    echo $sql . "<br>" . $error->getMessage();
- }
-  
+    
+    
+    
+        // $statement = $connection->prepare($sql);
+    
+        // $statement->execute();
+        // $result = $statement->fetchAll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        if( ($_POST['Username'] == $Username1) && ($_POST['Password'] == $Password1) )
+        {
+            $_SESSION['Username'] = $Username1;
+            $_SESSION['Active'] = true;
+            header("location:../Products.php"); /* 'header() is used to redirect the browser */
+            exit; //we’ve just used header() to redirect to another page but we must terminate all current code so that it doesn’t run when we redirect
+    
+        }
+        else
+            echo 'Incorrect Username or Password';
+    
+
+
+
+
+
+       
+     } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+     }
+
+
+
 
 
 
     /* Check if the form's username and password matches */
     /* these currently check against variable values stored in config.php but later we will see how these can be checked against information in a database*/
-    // if( ($_POST['Username'] == $Username) && ($_POST['Password'] == $Password) )
-    // {
-    //     $_SESSION['Username'] = $Username;
-    //     $_SESSION['Active'] = true;
-    //     header("location:../Products.php"); /* 'header() is used to redirect the browser */
-    //     exit; //we’ve just used header() to redirect to another page but we must terminate all current code so that it doesn’t run when we redirect
-
-    // }
-    // else
-    //     echo 'Incorrect Username or Password';
-}
+    }
 ?>
 
-<h1>MESSAGE: <?php echo $message ?></h1>
 </div>
 </body>
 </html>
