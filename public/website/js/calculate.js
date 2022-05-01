@@ -1,29 +1,3 @@
-function GetMap()
-{
-
-    var storeLocation = new Microsoft.Maps.Location(51.85075720513842, -8.479355109984628);
-    var map = new Microsoft.Maps.Map('#myMap', {
-        credentials: 'An_Q32lMqBZqHGRAFk-OqLOfn1WCJD0Zi5DAp8A2wLBKJRKAu5qYgWh4awL25_d5',
-        center: storeLocation,
-        zoom: 13,
-        disableScrollWheelZoom: true,
-        disablePanning: true
-    });
-
-
-    //Create custom Pushpin
-    var pin = new Microsoft.Maps.Pushpin(storeLocation, {
-        title: 'Logitech Ireland',
-        subTitle: 'Services Ltd',
-        text: '1'
-    });
-
-    //Add the pushpin to the map
-    map.entities.push(pin);
-
-
-}
-
 function Multiply()
 {
     num1 = document.getElementById("firstNumber").value;
@@ -57,21 +31,16 @@ var result5= num9 * num10;
 document.getElementById("total5").innerHTML = 'Total: €' + result5;
 document.getElementById("number5").innerHTML = 'Quantity: ' + num9;
 
-var shipping;
+
 var quantities = num1 + num3 + num5 + num7 + num9;
 
 
 var grandTotal = result + result2 + result3 + result4 + result5;
-if (grandTotal >= 100) {
-    shipping = 0;
-}
-else {
-    shipping = 20;
-}
 
 
 
-document.getElementById("GrandTotal").innerHTML = 'Total: €' + grandTotal + '<br> Shipping: €' + shipping + '<br> Grand Total: €' + (grandTotal + shipping);
+
+document.getElementById("GrandTotal").innerHTML = 'Total: €' + grandTotal +  '<br> Grand Total: €' + (grandTotal);
 }
 
 
