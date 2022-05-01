@@ -1,0 +1,293 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+img {
+	max-width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+.navbar-brand{
+    padding:1px;
+    margin:1px;
+}
+.container1 {
+  color: black;
+  font-family: helvetica, arial, sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  min-height: 600px;
+}
+.containerMap{
+    color:black;
+    font-family: helvetica, arial, sans-serif;
+}
+
+
+
+header {
+    background-color: #000000;
+    grid-column: 1 / 13;
+    height: 0px;
+}
+main {
+    background-image: url("../images/Keyboard.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / 13;
+    color: white;
+    padding-top:20px;
+    padding-bottom:20px;
+    height: auto;
+}
+
+
+
+
+
+
+nav {
+    background: lightblue;
+    grid-column: 1 / 3;
+}
+
+
+main, nav, aside {
+  grid-row: 2 / 4;
+}
+
+footer {
+    background: black;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    height: 150px;
+    text-align:center;
+    justify-content: center;
+}
+
+.footerchild{
+    height: 10px;
+    text-align: center;
+    width: 400px;
+    color:white;
+    padding-top:20px;
+}
+
+.about-us{
+    width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:darkturquoise;
+}
+
+#mapAbout{
+    text-align: center;
+    color:darkturquoise;
+    background-color:rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+
+}
+
+
+.cth{
+    grid-column: 1 / 13;
+    background:black;
+    color:white;
+    text-align: center;
+}
+
+.abootus{
+    padding-top:20px;
+}
+
+.partners{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-gap: 10px;
+    background:#00094a;
+
+}
+.products{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.productschild{
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid;
+    min-height: 150px;
+}
+
+input[type=number]{
+    width: 50px;
+}
+
+.partnerchild{
+    max-width: 400px;
+    width: 100%;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+#GrandTotal{
+    background:black;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .partners { grid-template-columns: auto auto;}
+    .about-us { width: 100%;}
+    footer {  grid-template-columns: auto auto;}
+	}
+
+
+@media only screen and (max-width: 600px) {
+    .partners { grid-template-columns: auto;}
+    footer {  grid-template-columns: auto;
+            height: 300px;}
+	}
+
+@media only screen and (max-width: 800px) {
+    .products { grid-template-columns: auto;}
+
+}
+
+#checkout{
+    background-color:#0064ff;
+    display: inline-block;
+    border:none;
+    color:white;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #0064ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+section{
+    max-width: 500px;
+    text-align: center;
+    margin:auto;
+    background-color: rgba(50, 50, 50, 0.8);
+
+}
+
+
+body{
+    background-color:#000000;
+}
+
+#name{
+    float:right;
+}
+
+#submitty{
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+table{
+    width: 475px;
+}
+
+
+
+tr{
+    height: 55px;
+}
+
+#myMap {
+    margin:auto;
+    width: 1000px;
+    height: 350px;
+}
+
+#myMapHolder{
+    background-color: rgba(50, 50, 50, 0.9);
+    text-align: center;
+    width:1050px;
+    height:500px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:auto;
+}
+
+#mainMap{
+    background-image: url("../images/Keyboard.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top:70px;
+    height: 500px;
+}
+
+
+#mapStorage{
+    background:cyan;
+    height:200px;
+}
+
+.carousel, .slideshow {
+    width: 1200px;
+    height: 800px;
+}
+
+.container {
+    margin-top: 150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .carousel, .slideshow{
+        width:600px;
+        height:400px;
+    }
+	}
+
+@media only screen and (max-width: 1050px) {
+    #myMapHolder, #myMap{
+        width:800px;
+    }
+	}
+
+@media only screen and (max-width: 800px){
+    #myMapHolder, #myMap{
+        width: 500px;
+    }
+}
+
