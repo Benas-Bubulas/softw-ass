@@ -117,7 +117,7 @@
             <input type="button" onClick="Multiply()" value="Add to Cart">
             </form>
             
-            <div class="productschild"><p>Tipperary Excel Heritage Co Ltd<br>AAAAAAAAAOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAAOOOOOOOOOOOOOAAAAAAA</p></div>
+            <div class="productschild"><p>Tipperary Excel Heritage Co Ltd<br></p></div>
             <div class="productschild"><img src="website/images/cTipperary.webp" alt="Tipperary Excel Heritage Co Ltd" width="300" height="auto"></div>
             
             <form>
