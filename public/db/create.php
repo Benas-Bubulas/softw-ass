@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
  <label for="lastname">Last Name</label>
  <input type="text" name="lastname" id="lastname">
  <label for="email">Email Address</label>
- <input type="text" name="email" id="email">
+ <input type="email" name="email" id="email">
  <label for="age">Age</label>
  <input type="text" name="age" id="age" maxlength="3"> 
  <label for="password">Password</label>
